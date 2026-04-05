@@ -7,12 +7,22 @@ Skin disease classification on DermaMNIST-64 dataset: A comparative study of Res
 ### DermaMNIST 7-Class Skin Lesion Classification | CNN vs Vision Transformer
 
 ---
+
 ## 📦 Pre-trained Models
 The trained model weights (.pth files) are **not uploaded** due to GitHub file size limits.
 
 ### How to get models:
 **Auto-generate (Recommended)**
    Run the training notebook (`ResNet18.ipynb` / `ViT_tiny_patch16_224.ipynb`), the best model will be automatically saved in the corresponding folder.
+
+---
+
+## 📂 Dataset
+This project uses **DermaMNIST-64** (64×64 RGB, 7-class skin disease dataset).
+
+### Data Acquisition
+- **Auto-download (Recommended)**: Run the notebooks, the dataset will be downloaded automatically via the `medmnist` library.
+- No local .npz file is required.
 
 ---
 
