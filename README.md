@@ -3,26 +3,26 @@ Skin disease classification on DermaMNIST-64 dataset: A comparative study of Res
 
 ---
 
+# 📂 Dataset Preparation
+This project uses **DermaMNIST-64** (64×64 RGB, 7-class skin disease dataset) for model training and evaluation.
+
+## 1. For ResNet18 (Required local dataset file)
+The ResNet18 code reads data from a local `.npz` file.
+- Please download `dermamnist_64.npz` first
+- Place it **in the project root directory** (same level as the `.ipynb` files)
+- The code will automatically load the dataset from this local file
+
+## 2. For ViT-Tiny (No local file required)
+The ViT-Tiny code uses the official `medmnist` API.
+- **No need to download any dataset in advance**
+- When you run the code, the dataset will be **automatically downloaded** to the default path
+- Just run the notebook directly
+
+---
+
+## Full Standard README (With Clear Data Instructions)
 # Skin Disease Classification with ResNet18 & ViT-Tiny
 ### DermaMNIST 7-Class Skin Lesion Classification | CNN vs Vision Transformer
-
----
-
-## 📦 Pre-trained Models
-The trained model weights (.pth files) are **not uploaded** due to GitHub file size limits.
-
-### How to get models:
-**Auto-generate (Recommended)**
-   Run the training notebook (`ResNet18.ipynb` / `ViT_tiny_patch16_224.ipynb`), the best model will be automatically saved in the corresponding folder.
-
----
-
-## 📂 Dataset
-This project uses **DermaMNIST-64** (64×64 RGB, 7-class skin disease dataset).
-
-### Data Acquisition
-- **Auto-download (Recommended)**: Run the notebooks, the dataset will be downloaded automatically via the `medmnist` library.
-- No local .npz file is required.
 
 ---
 
@@ -36,12 +36,20 @@ The project includes full pipelines: data exploration → preprocessing & augmen
 
 ---
 
-## 📊 Dataset Information
-- Dataset: DermaMNIST (subset of MedMNIST)
-- Image: 64×64 RGB (3 channels)
-- Classes: 7 skin disease types
-- Split: Train(7007) / Val(1003) / Test(2005)
-- **Key issue**: Severe class imbalance (Class 5 ≈ 66.98%; Classes 0/3/6 < 5%)
+## 📂 Dataset Preparation
+This project uses **DermaMNIST-64** (64×64 RGB, 7-class skin disease dataset).
+
+### 1. For ResNet18 (Required local dataset file)
+The ResNet18 code reads data from a local `.npz` file.
+- Please download `dermamnist_64.npz` first
+- Place it **in the project root directory** (same level as the `.ipynb` files)
+- The code will automatically load the dataset from this local file
+
+### 2. For ViT-Tiny (No local file required)
+The ViT-Tiny code uses the official `medmnist` API.
+- **No need to download any dataset in advance**
+- When you run the code, the dataset will be **automatically downloaded** to the default path
+- Just run the notebook directly
 
 ---
 
@@ -55,7 +63,7 @@ pip install torch torchvision timm medmnist numpy matplotlib seaborn scikit-lear
 
 ## 🚀 How to Run
 1. Clone this repository
-2. Prepare the DermaMNIST dataset (auto-download via `medmnist` API)
+2. Prepare dataset (follow instructions above)
 3. Run notebook files:
    - `ResNet18.ipynb` – CNN model training & evaluation & Grad-CAM
    - `ViT_tiny_patch16_224.ipynb` – ViT model training & evaluation & Attention Map
@@ -67,7 +75,6 @@ pip install torch torchvision timm medmnist numpy matplotlib seaborn scikit-lear
 ├── ResNet18.ipynb              # CNN baseline implementation
 ├── ViT_tiny_patch16_224.ipynb  # Vision Transformer implementation
 ├── results/                    # ROC, confusion matrix, visualization images
-├── EXPERIMENT_RESULTS.md       # Detailed experiment logs
 └── README.md                   # Project description
 ```
 
@@ -108,6 +115,15 @@ pip install torch torchvision timm medmnist numpy matplotlib seaborn scikit-lear
 2. Data augmentation & advanced training tricks (label smoothing, mixup) significantly improve ViT performance.
 3. Class imbalance severely affects CNN; ViT shows stronger robustness.
 4. Transformer’s self-attention provides better interpretability for clinical diagnosis.
+
+---
+
+## 📦 Pre-trained Models
+The trained model weights (.pth files) are **not uploaded** due to GitHub file size limits.
+
+### How to get models:
+1. **Auto-generate (Recommended)**
+   Run the training notebook, the best model will be automatically saved in the corresponding folder.
 
 ---
 
