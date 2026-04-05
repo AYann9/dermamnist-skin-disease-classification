@@ -1,0 +1,12 @@
+numpy
+torch
+torch.nn a
+torch.optim as optim
+matplotlib.pyplot
+os
+seaborn
+sklearn.metrics 
+sklearn.metrics
+sklearn.preprocessing
+timm
+math
