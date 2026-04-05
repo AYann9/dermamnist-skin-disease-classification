@@ -1,10 +1,18 @@
 # dermamnist-skin-disease-classification
 Skin disease classification on DermaMNIST-64 dataset: A comparative study of ResNet18 (CNN) and ViT-Tiny (Vision Transformer) for 7-category dermatological lesion diagnosis, with class imbalance handling, model evaluation and interpretability analysis.
 
---
+---
 
 # Skin Disease Classification with ResNet18 & ViT-Tiny
 ### DermaMNIST 7-Class Skin Lesion Classification | CNN vs Vision Transformer
+
+---
+## 📦 Pre-trained Models
+The trained model weights (.pth files) are **not uploaded** due to GitHub file size limits.
+
+### How to get models:
+**Auto-generate (Recommended)**
+   Run the training notebook (`ResNet18.ipynb` / `ViT_tiny_patch16_224.ipynb`), the best model will be automatically saved in the corresponding folder.
 
 ---
 
