@@ -133,8 +133,3 @@ The trained model weights (.pth files) are **not uploaded** due to GitHub file s
 3. Use larger models (EfficientNet, ViT-Base)
 4. Build ensemble model for higher stability
 5. Optimize inference speed for clinical deployment
-
----
-
-## 📝 License
-This project is for **academic & educational use only**.
